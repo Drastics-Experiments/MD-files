@@ -6,7 +6,7 @@ Source snapshot: 2026-09-27. This records existing source definitions and config
 
 ## Map inventory
 
-Four map configuration modules exist. The active rotation is determined by [MapConfig](../src/ServerScriptService/MapConfig/init.luau).
+Four map configuration modules exist. The active rotation is determined by [MapConfig](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ServerScriptService/MapConfig/init.luau).
 
 | Map | Current integration |
 | --- | --- |
@@ -15,7 +15,7 @@ Four map configuration modules exist. The active rotation is determined by [MapC
 | Heights Expansion | Existing map/configuration; outside the current rotation. |
 | Deadwood Basin | Existing map/configuration; outside the current rotation. |
 
-Other designs in [map-layouts](map-layouts) are concept/planning assets and are not counted as playable maps here.
+Other designs in [map-layouts](https://github.com/DrasticDeveloping/rain/tree/b49a73f60f7fb18db88dffe87783fa2c208e28a7/docs/map-layouts) are concept/planning assets and are not counted as playable maps here.
 
 Enemy HP, damage, rewards, and individual attack settings are in [enemies and bosses](game-enemies.md).
 
@@ -29,7 +29,7 @@ Enemy HP, damage, rewards, and individual attack settings are in [enemies and bo
 | Insane / 4 | 600–899.999 s | 2.2 | 2 |
 | Nightmare / 5 | 900 s onward | 3 | 2.5 |
 
-The schedule uses accumulated active run time, not time since the current map loaded. See [Source](../src/ServerScriptService/ServerConfig.luau) and [Source](../src/ServerScriptService/Gameplay.luau).
+The schedule uses accumulated active run time, not time since the current map loaded. See [Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ServerScriptService/ServerConfig.luau) and [Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ServerScriptService/Gameplay.luau).
 
 The director uses `M = (1 + 0.6 × (participants - 1)) × (1 + 0.2 × (stage - 1)) × difficulty income multiplier`. Active income interpolates from InitialIncome to FinalIncome over SpawnRampDuration, then multiplies by M. Ambient income is AmbientIncome × M. Purchase intervals divide by M; bank capacities multiply by the tier bank multiplier. Banks start empty. A selected purchase waits for enough credits; it is not rerolled just because the bank is temporarily short.
 
@@ -37,7 +37,7 @@ The director uses `M = (1 + 0.6 × (participants - 1)) × (1 + 0.2 × (stage - 1
 
 Each percentage below is `effective card weight / sum of eligible effective weights × 100`. It describes a **new card selection**, not a chance each frame, per kill, or per individual enemy. Tables assume all listed positive-weight cards fit bank/population capacity, stage gates are satisfied, and no placement cooldown excludes them. Pattern/pack counts, credit cost, spawn timing, space, and population limits change observed spawn frequency. The director picks uniformly among eligible pack patterns after choosing a card.
 
-`DifficultyWeights` overrides the card’s fallback `Weight`. `Progression` can additionally ramp a card’s weight using active run time. `Spawn.Chance` fields on some definitions are not read by this director and are not the percentages below. Placement attempts expire after 8 seconds; failed placements can temporarily exclude a card for twice its current channel interval. See [Source](../src/ServerScriptService/CombatDirector.luau).
+`DifficultyWeights` overrides the card’s fallback `Weight`. `Progression` can additionally ramp a card’s weight using active run time. `Spawn.Chance` fields on some definitions are not read by this director and are not the percentages below. Placement attempts expire after 8 seconds; failed placements can temporarily exclude a card for twice its current channel interval. See [Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ServerScriptService/CombatDirector.luau).
 
 ### RustwakeWreck — active rotation
 
@@ -91,7 +91,7 @@ Map-specific weight progression: `{}`. Percentages above are the full-weight bas
 | AmbientPlacement.FloorSearch | 48 |
 | AmbientDetectionRadius | 40 |
 
-[Source](../src/ServerScriptService/MapConfig/RustwakeWreck.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ServerScriptService/MapConfig/RustwakeWreck.luau)
 
 **Chest cards**
 
@@ -149,7 +149,7 @@ Map-specific weight progression: `{}`. Percentages above are the full-weight bas
 | AmbientPlacement.FloorSearch | 16 |
 | AmbientDetectionRadius | 40 |
 
-[Source](../src/ServerScriptService/MapConfig/FloodedQuarry.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ServerScriptService/MapConfig/FloodedQuarry.luau)
 
 **Chest cards**
 
@@ -211,7 +211,7 @@ Map-specific weight progression: `{'Knight': {'Start': '0.1', 'Full': '0.3'}, 'N
 | AmbientPlacement.FloorSearch | 48 |
 | AmbientDetectionRadius | 40 |
 
-[Source](../src/ServerScriptService/MapConfig/HeightsExpansion.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ServerScriptService/MapConfig/HeightsExpansion.luau)
 
 **Chest cards**
 
@@ -265,7 +265,7 @@ Map-specific weight progression: `{}`. Percentages above are the full-weight bas
 | AmbientPlacement.FloorSearch | 48 |
 | AmbientDetectionRadius | 40 |
 
-[Source](../src/ServerScriptService/MapConfig/DeadwoodBasin.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ServerScriptService/MapConfig/DeadwoodBasin.luau)
 
 **Chest cards**
 

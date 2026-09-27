@@ -6,7 +6,7 @@ Source snapshot: 2026-09-27. This records existing source definitions and config
 
 ## Roster
 
-22 [enemy definitions](../src/ReplicatedStorage/Modues/Enemies), including bosses, summons, and size variants. Names are spaced for readability; this list includes enemies belonging to inactive maps.
+22 [enemy definitions](https://github.com/DrasticDeveloping/rain/tree/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies), including bosses, summons, and size variants. Names are spaced for readability; this list includes enemies belonging to inactive maps.
 
 - Adult Antlion
 - Balloon Bomb
@@ -31,7 +31,7 @@ Source snapshot: 2026-09-27. This records existing source definitions and config
 - Skeleton
 - Wrecking Ball Guest
 
-Railgunner weak-point configuration now exists for all 22 definitions. See the [weak-point implementation notes](enemy-weak-points.md) for verification limits.
+Railgunner weak-point configuration now exists for all 22 definitions. See the [weak-point implementation notes](README.md#verification-status) for verification limits.
 
 Spawn pools, percentages by difficulty, timing, and population limits are in [maps and spawning](game-maps.md#enemy-spawn-selection-chances).
 
@@ -45,32 +45,59 @@ Source expressions are retained when a value depends on runtime state, rig geome
 
 | Enemy | HP | Damage | Defense | Attack speed | Move speed | HP/level | Damage/level | Gold | XP | Director cost |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [AdultAntlion](../src/ReplicatedStorage/Modues/Enemies/AdultAntlion/init.luau) | 110 | 16 | 4 | 1 | 15 | 24 | 3 | 18 | 18 | 32 |
-| [BalloonBomb](../src/ReplicatedStorage/Modues/Enemies/BalloonBomb/init.luau) | 40 | 300 | 0 | 1 | 8 | 6 | 20 | 10 | 10 | 30 |
-| [Barkback](../src/ReplicatedStorage/Modues/Enemies/Barkback/init.luau) | 140 | 16 | 12 | 1 | 10 | 40 | 2 | 14 | 14 | 35 |
-| [DuneSkitter](../src/ReplicatedStorage/Modues/Enemies/DuneSkitter.luau) | 110 | 14 | 0 | 1 | 9 | 20 | 2 | 12 | 12 | 10 |
-| [DuneViper](../src/ReplicatedStorage/Modues/Enemies/DuneViper/init.luau) | 180 | 20 | 5 | 1 | 9 | 0 | 0 | 24 | 24 | 20 |
-| [FoundationTitan](../src/ReplicatedStorage/Modues/Enemies/FoundationTitan/init.luau) | 6000 | 36 | 35 | 1 | 32 | 1500 | 5 | 150 | 250 | Not director-purchased |
-| [GlassTail](../src/ReplicatedStorage/Modues/Enemies/GlassTail.luau) | 200 | 16 | 15 | 1 | 2.4 | 40 | 3 | 22 | 22 | 30 |
-| [Knight](../src/ReplicatedStorage/Modues/Enemies/Knight/init.luau) | 100 | 12 | 53.8462 | 0.8 | 10 | 30 | 3 | 10 | 10 | 25 |
-| [MagmaWorm](../src/ReplicatedStorage/Modues/Enemies/MagmaWorm/init.luau) | 420 | 26 | 15 | 1 | 12 | 0 | 0 | 40 | 40 | 40 |
-| [Necromancer](../src/ReplicatedStorage/Modues/Enemies/Necromancer/init.luau) | 240 | 16 | 25 | 1 | 8 | 40 | 3 | 45 | 45 | 65 |
-| [Noob](../src/ReplicatedStorage/Modues/Enemies/Noob/init.luau) | 55 | 8 | 0 | 1 | 3 | 10 | 1 | 10 | 10 | 20 |
-| [Parallax](../src/ReplicatedStorage/Modues/Enemies/Parallax/init.luau) | 4500 | 24 | 15 | 1 | 5.5 | 900 | 4 | 150 | 250 | 150 |
-| [QuarrySlime](../src/ReplicatedStorage/Modues/Enemies/QuarrySlime/init.luau) | 260 | 24 | 0 | 1 | 5 | 65 | 3 | 12 | 18 | 45 |
-| [QuarrySlimeMedium](../src/ReplicatedStorage/Modues/Enemies/QuarrySlimeMedium/init.luau) | 95 | 14 | 0 | 1 | 7 | 20 | 2 | 6 | 8 | Not director-purchased |
-| [QuarrySlimeSmall](../src/ReplicatedStorage/Modues/Enemies/QuarrySlimeSmall/init.luau) | 35 | 7 | 0 | 1 | 9 | 6 | 1 | 3 | 4 | Not director-purchased |
-| [ReedStalker](../src/ReplicatedStorage/Modues/Enemies/ReedStalker/init.luau) | 85 | 14 | 0 | 1 | 12 | 15 | 3 | 18 | 18 | 30 |
-| [RoyalGuard](../src/ReplicatedStorage/Modues/Enemies/RoyalGuard/init.luau) | 500 | 24 | 100 | 1 | 9 | 150 | 3 | 40 | 40 | 60 |
-| [Rustback](../src/ReplicatedStorage/Modues/Enemies/Rustback.luau) | 420 | 100 | 50 | 1 | 2 | 120 | 3 | 30 | 30 | 45 |
-| [Shardling](../src/ReplicatedStorage/Modues/Enemies/Shardling/init.luau) | 45 | 8 | 0 | 1 | 12 | 8 | 1 | 0 | 0 | Not director-purchased |
-| [Shieldbearer](../src/ReplicatedStorage/Modues/Enemies/Shieldbearer/init.luau) | 360 | 18 | 25 | 1 | 8 | 100 | 2 | 30 | 30 | 40 |
-| [Skeleton](../src/ReplicatedStorage/Modues/Enemies/Skeleton/init.luau) | 80 | 12 | 5 | 0.8 | 10 | 18 | 2 | 10 | 10 | 10 |
-| [WreckingBallGuest](../src/ReplicatedStorage/Modues/Enemies/WreckingBallGuest/init.luau) | 900 | 24 | 50 | 1 | 10 | 225 | 4 | 60 | 60 | 80 |
+| [AdultAntlion](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/AdultAntlion/init.luau) | 110 | 16 | 4 | 1 | 15 | 24 | 3 | 18 | 18 | 32 |
+| [BalloonBomb](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/BalloonBomb/init.luau) | 40 | 300 | 0 | 1 | 8 | 6 | 20 | 10 | 10 | 30 |
+| [Barkback](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Barkback/init.luau) | 140 | 16 | 12 | 1 | 10 | 40 | 2 | 14 | 14 | 35 |
+| [DuneSkitter](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/DuneSkitter.luau) | 110 | 14 | 0 | 1 | 9 | 20 | 2 | 12 | 12 | 10 |
+| [DuneViper](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/DuneViper/init.luau) | 180 | 20 | 5 | 1 | 9 | 0 | 0 | 24 | 24 | 20 |
+| [FoundationTitan](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/FoundationTitan/init.luau) | 6000 | 36 | 35 | 1 | 32 | 1500 | 5 | 150 | 250 | Not director-purchased |
+| [GlassTail](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/GlassTail.luau) | 200 | 16 | 15 | 1 | 2.4 | 40 | 3 | 22 | 22 | 30 |
+| [Knight](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Knight/init.luau) | 100 | 12 | 53.8462 | 0.8 | 10 | 30 | 3 | 10 | 10 | 25 |
+| [MagmaWorm](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/MagmaWorm/init.luau) | 420 | 26 | 15 | 1 | 12 | 0 | 0 | 40 | 40 | 40 |
+| [Necromancer](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Necromancer/init.luau) | 240 | 16 | 25 | 1 | 8 | 40 | 3 | 45 | 45 | 65 |
+| [Noob](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Noob/init.luau) | 55 | 8 | 0 | 1 | 3 | 10 | 1 | 10 | 10 | 20 |
+| [Parallax](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Parallax/init.luau) | 4500 | 24 | 15 | 1 | 5.5 | 900 | 4 | 150 | 250 | 150 |
+| [QuarrySlime](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlime/init.luau) | 260 | 24 | 0 | 1 | 5 | 65 | 3 | 12 | 18 | 45 |
+| [QuarrySlimeMedium](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlimeMedium/init.luau) | 95 | 14 | 0 | 1 | 7 | 20 | 2 | 6 | 8 | Not director-purchased |
+| [QuarrySlimeSmall](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlimeSmall/init.luau) | 35 | 7 | 0 | 1 | 9 | 6 | 1 | 3 | 4 | Not director-purchased |
+| [ReedStalker](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/ReedStalker/init.luau) | 85 | 14 | 0 | 1 | 12 | 15 | 3 | 18 | 18 | 30 |
+| [RoyalGuard](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/RoyalGuard/init.luau) | 500 | 24 | 100 | 1 | 9 | 150 | 3 | 40 | 40 | 60 |
+| [Rustback](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Rustback.luau) | 420 | 100 | 50 | 1 | 2 | 120 | 3 | 30 | 30 | 45 |
+| [Shardling](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Shardling/init.luau) | 45 | 8 | 0 | 1 | 12 | 8 | 1 | 0 | 0 | Not director-purchased |
+| [Shieldbearer](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Shieldbearer/init.luau) | 360 | 18 | 25 | 1 | 8 | 100 | 2 | 30 | 30 | 40 |
+| [Skeleton](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Skeleton/init.luau) | 80 | 12 | 5 | 0.8 | 10 | 18 | 2 | 10 | 10 | 10 |
+| [WreckingBallGuest](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/WreckingBallGuest/init.luau) | 900 | 24 | 50 | 1 | 10 | 225 | 4 | 60 | 60 | 80 |
 
 FoundationTitan and Shardling have no director purchase card/cost in their definitions; the medium/small Quarry Slimes arise from splitting. Absence from a map pool means no automatic selection from that pool, not that an enemy cannot be summoned or spawned by a command.
 
 ## Attack, movement, spawning, and protection details
+
+| Enemy | Attack behavior |
+| --- | --- |
+| Adult Antlion | Bites at close range while grounded. In flight it spits an acid projectile toward its target; the spit travels at 42 studs/s and lasts up to 2.5 s. |
+| Balloon Bomb | Begins a 0.8 s base fuse near a target, then explodes in a 12-stud radius and destroys itself. The explosion damages valid player targets with an unobstructed ray from the blast origin. |
+| Barkback | Uses a close pincer snap or a longer-range charge. The charge has a 0.9 s windup, moves at 24 studs/s for up to 1.25 s, and then recovers for 1.2 s. |
+| Dune Skitter | Uses a bite within 6.5 studs or a single sand projectile at 10-42 studs; the spit travels at 34 studs/s. |
+| Dune Viper | Within 12 studs, burrows toward a valid ground position and erupts, launching and briefly stunning targets in the strike area. Farther away, up to 38 studs, spits venom that deals impact damage and leaves a damaging pool. |
+| Foundation Titan | Chooses a reachable hand slam or ranged eye beam/finger volley. Fired fingers regrow; after three attacks it opens its core, creating the exposed damage window. Finger attacks can produce Shardlings, subject to the summon cap. |
+| Glass Tail | Uses a two-contact pincer combo within 8.5 studs or a three-projectile glass volley at 9-55 studs. Each projectile travels at 38 studs/s. |
+| Knight | Winds up a forward melee strike, checks its attack volume at contact, then recovers. The geometry and timing are listed under KnightStrike below. |
+| Magma Worm | Dives, travels underground, and breaches near the target. Eruptions and exposed body contact share a per-target damage interval; buried body segments are not exposed hit volumes. |
+| Necromancer | Fires a slow homing bolt and periodically summons two Skeletons. Summoning spends its nonregenerating barrier pool and respects a cap of six living summons. |
+| Noob | Winds up a slingshot burst of 1-4 pellets, randomly distributed within a 10-degree cone, then recovers. Pellets travel at 32 studs/s and last up to 2.25 s. |
+| Parallax | Cycles through shard lasers, projectile volleys, and a transition into its combined beam. Four laser discharges warn before firing and lock aim 0.25 s before each shot; volleys lead target movement; the sustained beam tracks at a bounded aim speed. |
+| Quarry Slime | Performs an area strike around its body, then can split into two medium slimes on death if population and clear-space checks permit. |
+| Quarry Slime Medium | Uses the shared slime strike with smaller reach and damage; can split into two small slimes on death under the same placement rules. |
+| Quarry Slime Small | Uses the smallest shared slime strike and does not split further. |
+| Reed Stalker | Fires a mud projectile after approximately 1.033 s of windup at base attack rate, with a 72-stud start range and 42-stud/s projectile speed. |
+| Royal Guard | Uses a wide sweep or a longer thrust. A sweep has a 30% chance to continue into a thrust after a 0.35 s gap, retaining the original direction. Its armor can break, reducing defense from 100 to 20. |
+| Rustback | Performs a heavy close-range ram with an 8.5-stud reach and a 3.5 s configured cooldown. |
+| Shardling | A small melee summon that waits for its arrival animation before attacking; attacks start within 4.5 studs and reach 5 studs. |
+| Shieldbearer | Faces threats behind a directional shield and strikes at close range. Once the shield breaks, strike damage is halved. |
+| Skeleton | Performs a close-range strike using its authored contact timing and recovery; reach and geometry are in SkeletonStrike below. |
+| Wrecking Ball Guest | Swings at close range, slams the ball into a ground area, or enters a moving rampage from 12-36 studs. Rampage deals repeated contact damage at 0.5 s intervals rather than one full-strength hit each frame. |
+
+These summaries describe the current attack paths; timing fields below are base values and may be divided by the ability's attack rate. Animation contact events can determine damage timing independently of the cooldown.
 
 These are level-1 raw attack amounts before the target's defense/protection, not guaranteed health removed:
 
@@ -97,7 +124,7 @@ These are level-1 raw attack amounts before the target's defense/protection, not
 | Skeleton | Strike 12 (1x). |
 | Wrecking Ball Guest | Swing 24; slam 36 (1.5x); rampage 6 per 0.5 s hit interval (0.25x). |
 
-Quarry Slime children inherit the shared attack: 3.2 s cooldown, contact at `1.04 / attack rate`, completion at `2.8 / attack rate`; start ranges are 12 / 10 / 7.5 for large / medium / small. A large slime splits into two medium slimes, each of which can split into two small slimes. Splits require capacity and two valid clear placements, so blocked splits are not guaranteed. [Attack](../src/ReplicatedStorage/Modues/Enemies/QuarrySlime/Attack.luau), [splitting](../src/ReplicatedStorage/Modues/Enemies/QuarrySlime/Protection.luau).
+Quarry Slime children inherit the shared attack: 3.2 s cooldown, contact at `1.04 / attack rate`, completion at `2.8 / attack rate`; start ranges are 12 / 10 / 7.5 for large / medium / small. A large slime splits into two medium slimes, each of which can split into two small slimes. Splits require capacity and two valid clear placements, so blocked splits are not guaranteed. [Attack](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlime/Attack.luau), [splitting](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlime/Protection.luau).
 
 Foundation Titan's exposed CoreIdle phase sets defense to zero and doubles incoming damage for its configured 6 s core window. Necromancer has a separate 240 raw-damage barrier; summoning costs 80 barrier, summons two Skeletons, and caps living summons at six. Royal Guard breaks armor after 300 raw damage and changes defense from 100 to 20. Shieldbearer's shield has 240 durability and a 110-degree arc. See the linked definitions, tuning, and protection modules below.
 
@@ -105,7 +132,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### AdultAntlion
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/AdultAntlion/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/AdultAntlion/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -128,7 +155,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### AdultAntlion / Bite
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/AdultAntlion/Bite.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/AdultAntlion/Bite.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -141,7 +168,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### AdultAntlion / Spit
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/AdultAntlion/Spit.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/AdultAntlion/Spit.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -157,7 +184,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### AdultAntlion / Tuning
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/AdultAntlion/Tuning.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/AdultAntlion/Tuning.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -182,7 +209,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### BalloonBomb
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/BalloonBomb/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/BalloonBomb/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -205,7 +232,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Barkback
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Barkback/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Barkback/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -226,7 +253,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Barkback / Attack
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Barkback/Attack.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Barkback/Attack.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -236,7 +263,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Barkback / Tuning
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Barkback/Tuning.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Barkback/Tuning.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -257,7 +284,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### DuneSkitter
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/DuneSkitter.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/DuneSkitter.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -305,7 +332,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### DuneViper
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/DuneViper/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/DuneViper/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -327,7 +354,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### DuneViper / Attack
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/DuneViper/Attack.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/DuneViper/Attack.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -337,7 +364,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### DuneViper / Tuning
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/DuneViper/Tuning.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/DuneViper/Tuning.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -363,7 +390,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### FoundationTitan
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/FoundationTitan/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/FoundationTitan/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -381,7 +408,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### FoundationTitan / Attack
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/FoundationTitan/Attack.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/FoundationTitan/Attack.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -390,7 +417,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### FoundationTitan / Tuning
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/FoundationTitan/Tuning.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/FoundationTitan/Tuning.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -430,7 +457,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### GlassTail
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/GlassTail.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/GlassTail.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -476,7 +503,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Knight
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Knight/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Knight/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -494,7 +521,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Knight / KnightStrike
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Knight/KnightStrike.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Knight/KnightStrike.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -512,7 +539,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### MagmaWorm
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/MagmaWorm/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/MagmaWorm/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -535,7 +562,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### MagmaWorm / Attack
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/MagmaWorm/Attack.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/MagmaWorm/Attack.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -545,7 +572,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### MagmaWorm / Tuning
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/MagmaWorm/Tuning.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/MagmaWorm/Tuning.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -566,7 +593,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Necromancer
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Necromancer/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Necromancer/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -610,7 +637,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Necromancer / Combat
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Necromancer/Combat.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Necromancer/Combat.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -628,7 +655,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Noob
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Noob/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Noob/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -661,7 +688,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Noob / SlingshotBurst
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Noob/SlingshotBurst.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Noob/SlingshotBurst.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -675,7 +702,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Parallax
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Parallax/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Parallax/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -698,7 +725,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Parallax / Attack
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Parallax/Attack.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Parallax/Attack.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -707,7 +734,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Parallax / Tuning
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Parallax/Tuning.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Parallax/Tuning.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -747,7 +774,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### QuarrySlime
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/QuarrySlime/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlime/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -771,7 +798,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### QuarrySlime / Attack
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/QuarrySlime/Attack.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlime/Attack.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -781,7 +808,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### QuarrySlime / Tuning
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/QuarrySlime/Tuning.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlime/Tuning.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -826,7 +853,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### QuarrySlimeMedium
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/QuarrySlimeMedium/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlimeMedium/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -850,7 +877,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### QuarrySlimeSmall
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/QuarrySlimeSmall/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/QuarrySlimeSmall/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -874,7 +901,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### ReedStalker
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/ReedStalker/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/ReedStalker/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -896,7 +923,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### ReedStalker / Attack
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/ReedStalker/Attack.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/ReedStalker/Attack.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -912,7 +939,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### ReedStalker / Tuning
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/ReedStalker/Tuning.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/ReedStalker/Tuning.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -926,7 +953,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### RoyalGuard
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/RoyalGuard/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/RoyalGuard/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -974,7 +1001,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### RoyalGuard / Combat
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/RoyalGuard/Combat.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/RoyalGuard/Combat.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -983,7 +1010,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Rustback
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Rustback.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Rustback.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -1013,7 +1040,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Shardling
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Shardling/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Shardling/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -1028,7 +1055,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Shardling / Attack
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Shardling/Attack.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Shardling/Attack.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -1041,7 +1068,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Shieldbearer
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Shieldbearer/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Shieldbearer/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -1073,7 +1100,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Shieldbearer / Combat
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Shieldbearer/Combat.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Shieldbearer/Combat.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -1082,7 +1109,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Shieldbearer / Tuning
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Shieldbearer/Tuning.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Shieldbearer/Tuning.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -1112,7 +1139,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Skeleton
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Skeleton/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Skeleton/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -1131,7 +1158,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### Skeleton / SkeletonStrike
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/Skeleton/SkeletonStrike.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/Skeleton/SkeletonStrike.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -1150,7 +1177,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### WreckingBallGuest
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/WreckingBallGuest/init.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/WreckingBallGuest/init.luau)
 
 | Parameter | Configured value |
 | --- | --- |
@@ -1202,7 +1229,7 @@ Detailed fields supplement the base-stat summary. Multipliers apply to base Atta
 
 ### WreckingBallGuest / Combat
 
-[Source](../src/ReplicatedStorage/Modues/Enemies/WreckingBallGuest/Combat.luau)
+[Source](https://github.com/DrasticDeveloping/rain/blob/b49a73f60f7fb18db88dffe87783fa2c208e28a7/src/ReplicatedStorage/Modues/Enemies/WreckingBallGuest/Combat.luau)
 
 | Parameter | Configured value |
 | --- | --- |
